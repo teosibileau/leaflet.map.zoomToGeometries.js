@@ -8,7 +8,7 @@ http://nucivic.github.io/leaflet.map.zoomToGeometries.js/
 
 ```js
 var div = $('#map');
-var map = new L.map(div.get(0));
+var map = new L.GeoJSONBoundedMap(div.get(0));
 var geojson = {
   type: "FeatureCollection",
   features: [

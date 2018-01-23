@@ -1,4 +1,4 @@
-L.Map = L.Map.extend({
+L.GeoJSONBoundedMap = L.Map.extend({
   _extendBounds: function(bounds, coordinates) {
     var latlng = new L.LatLng(coordinates[1], coordinates[0]);
     bounds.extend(latlng);
@@ -30,7 +30,7 @@ L.Map = L.Map.extend({
                 for (k = 0; k < feature.geometry.coordinates[i][j].length; k++) {
                   bounds = this._extendBounds(bounds, feature.geometry.coordinates[i][j][k]);
                 }
-              }  
+              }
             }
             break;
         }

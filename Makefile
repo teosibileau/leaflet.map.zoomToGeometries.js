@@ -1,8 +1,8 @@
 build-page:
-	git branch -D gh-pages
+	# git branch -D gh-pages
 	git checkout --orphan gh-pages
 	cp examples/* .
-	mv vendor public
+	cp -r vendor public
 	sed -i.bak 's/\.\.\/vendor/public/g' index.html
 	sed -i.bak 's/\.\.\/data/data/g' app.js
 	sed -i.bak 's/\.\.\///g' index.html

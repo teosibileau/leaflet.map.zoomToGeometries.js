@@ -1,5 +1,5 @@
 build-page:
-	# git branch -D gh-pages
+	git branch -D gh-pages
 	git checkout --orphan gh-pages
 	cp examples/* .
 	cp -r vendor public

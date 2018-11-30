@@ -8,4 +8,7 @@ $.getJSON('../data/usa_states.json', function(data){
   map.addLayer(bg);
   geojson.addTo(map);
   map.zoomToGeometries(geojson);
+  $('#zoomToGeometries').click(function(e){
+    map.zoomToGeometries(geojson);
+  })
 });

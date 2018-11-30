@@ -8,6 +8,7 @@ build-page:
 	sed -i.bak 's/\.\.\/data/data/g' app.js
 	sed -i.bak 's/\.\.\///g' index.html
 	rm *.bak
+	rm -rf public/leaflet/docs/examples
 	git add . -A
 	git commit -m 'Building gh-pages branch'
 	git push origin gh-pages --force
